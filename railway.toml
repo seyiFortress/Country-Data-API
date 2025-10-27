@@ -5,6 +5,9 @@ builder = "nixpacks"
 startCommand = "npm start"
 restartPolicyType = "on_failure"
 restartPolicyMaxRetries = 10
+healthcheckPath = "/status"
+healthcheckTimeout = 100
+healthcheckInterval = 10
 
 [[services]]
 name = "api"
@@ -12,3 +15,6 @@ name = "api"
 [services.variables]
 NODE_ENV = "production"
 PORT = "3000"
+
+[nixpacks]
+npm-omit-dev = true
