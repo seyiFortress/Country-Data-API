@@ -1,0 +1,33 @@
+{
+  "name": "country-api",
+  "version": "1.0.0",
+  "description": "RESTful API for country data with CRUD operations",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "create-db": "node scripts/create-database.js",
+    "sync-db": "node scripts/sync-models.js",
+    "setup-db": "npm run create-db && npm run sync-db",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seyiFortress/Country-Data-API.git"
+  },
+  "author": "Seyi Fortress",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/seyiFortress/Country-Data-API/issues"
+  },
+  "homepage": "https://github.com/seyiFortress/Country-Data-API#readme",
+  "dependencies": {
+    "axios": "^1.12.2",
+    "canvas": "^3.2.0",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "mysql2": "^3.15.3",
+    "nodemon": "^3.1.10",
+    "sequelize": "^6.37.7"
+  }
+}
