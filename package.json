@@ -9,7 +9,10 @@
     "sync-db": "node scripts/sync-models.js",
     "setup-db": "npm run create-db && npm run sync-db",
     "start": "node server.js",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "railway:deploy": "railway up",
+    "railway:logs": "railway logs",
+    "railway:env": "railway variables"
   },
   "repository": {
     "type": "git",

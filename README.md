@@ -62,3 +62,56 @@ A RESTful API that fetches country data from external APIs, stores it in a MySQL
    ```bash
    npm run dev
    ```
+
+## Railway Deployment
+
+To deploy this API on Railway:
+
+1. Install the Railway CLI:
+   ```bash
+   npm install -g @railway/cli
+   ```
+
+2. Login to Railway:
+   ```bash
+   railway login
+   ```
+
+3. Initialize Railway project:
+   ```bash
+   railway init
+   ```
+
+4. Add a MySQL database plugin:
+   ```bash
+   railway add mysql
+   ```
+
+5. Deploy to Railway:
+   ```bash
+   railway up
+   ```
+
+6. Set up the database schema on Railway:
+   ```bash
+   railway run npm run setup-db
+   ```
+
+7. View your deployed API:
+   ```bash
+   railway open
+   ```
+
+### Railway Environment Variables
+
+Railway will automatically provide the following environment variables:
+- `DATABASE_URL`: The complete MySQL connection string
+- `PORT`: The port number for the web service
+
+The application is configured to automatically use Railway's `DATABASE_URL` when available, or fall back to individual database credentials for local development.
+
+### Useful Railway Commands
+
+- `npm run railway:deploy` - Deploy the application
+- `npm run railway:logs` - View application logs
+- `npm run railway:env` - Manage environment variables
